@@ -1,0 +1,54 @@
+{
+    "name": "haxem/test",
+    "description": "",
+    "keywords": [
+        "haxem",
+        "test"
+    ],
+    "homepage": "https://github.com/haxem/test",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Emrullah YAZLI",
+            "email": "emrullahyazli@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "illuminate/support": "^6.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^4.0",
+        "phpunit/phpunit": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Haxem\\Test\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Haxem\\Test\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Haxem\\Test\\TestServiceProvider"
+            ],
+            "aliases": {
+                "Test": "Haxem\\Test\\TestFacade"
+            }
+        }
+    }
+}
